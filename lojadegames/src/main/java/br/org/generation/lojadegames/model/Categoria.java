@@ -15,14 +15,14 @@ import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "tb_categorias")
+@Table(name = "tb_categoria")
 public class Categoria {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@NotNull(message = "Tipo é obrigatório!")
+	@NotNull(message = "A categoria é obrigatória!!!")
 	@Size(min = 5)
 	private String tipo;
 	
@@ -54,5 +54,5 @@ public class Categoria {
 		this.produto = produto;
 	}
 	
-	
+
 }
