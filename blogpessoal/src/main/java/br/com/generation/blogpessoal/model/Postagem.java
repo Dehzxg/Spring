@@ -38,6 +38,10 @@ public class Postagem {
 	@JsonIgnoreProperties("postagem") // Para não criar um efeito cascata     
 	private Tema tema;
 	
+	@ManyToOne
+    @JsonIgnoreProperties("postagem")
+    private Usuario usuario;
+	
 	public long getId() {
 		return id;
 	}
